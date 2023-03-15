@@ -44,15 +44,18 @@ st.markdown(read_file_contents(INTRO_FILE))
 
 # set the variables for the run.
 # these are just a subset of the total available for this example...
-triage_bays = 1
-exam_rooms = 3
-treat_rooms = 1
+# in streamlit we are going to set these using sliders.
+triage_bays = st.slider('Triage bays', 1, 5, 1)
+exam_rooms = st.slider('Exam rooms', 1, 5, 3)
+treat_rooms = st.slider('Non-Trauma Treatment cubicles', 1, 5, 1, 
+                         help='Set the number of non trauma pathway treatment cubicles')
 
 # examination mean
-exam_mean = 16.0
+exam_mean = st.slider('Mean examination time', 10.0, 45.0, 
+                       16.0, 1.0)
 
 # runs
-replications = 10
+replications = st.slider('No. replications', 1, 50, 10)
 
 # Setup scenario using supplied variables
 args = Scenario()
@@ -61,8 +64,13 @@ args.n_exam = exam_rooms
 args.n_cubicles_1 = treat_rooms
 args.exam_mean = exam_mean
 
-# in this example run a single replication of the model.
-results = multiple_replications(args, n_reps=replications)
+if st.button('Simulate treatment centre'):
 
-print(results.mean().round(1))
+    # in this example run a single replication of the model.
+    with st.spinner('Simulating the treatment centre...'):
+        results = multiple_replications(args, n_reps=replications)
+
+    st.success('Done!')
+
+    st.table(results.mean().round(1))
 
