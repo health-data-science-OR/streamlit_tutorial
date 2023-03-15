@@ -40,20 +40,23 @@ st.title('Treatment Centre Simulation Model')
 # show the introductory markdown
 st.markdown(read_file_contents(INTRO_FILE))
 
-# set the variables for the run.
-# these are just a subset of the total available for this example...
-# in streamlit we are going to set these using sliders.
-triage_bays = st.slider('Triage bays', 1, 5, 1)
-exam_rooms = st.slider('Exam rooms', 1, 5, 3)
-treat_rooms = st.slider('Non-Trauma Treatment cubicles', 1, 5, 1, 
-                         help='Set the number of non trauma pathway treatment cubicles')
+# Using "with" notation
+with st.sidebar:
 
-# examination mean
-exam_mean = st.slider('Mean examination time', 10.0, 45.0, 
-                       16.0, 1.0)
+    # set the variables for the run.
+    # these are just a subset of the total available for this example...
+    # in streamlit we are going to set these using sliders.
+    triage_bays = st.slider('Triage bays', 1, 5, 1)
+    exam_rooms = st.slider('Exam rooms', 1, 5, 3)
+    treat_rooms = st.slider('Non-Trauma Treatment cubicles', 1, 5, 1, 
+                            help='Set the number of non trauma pathway treatment cubicles')
 
-# runs
-replications = st.slider('No. replications', 1, 50, 10)
+    # examination mean
+    exam_mean = st.slider('Mean examination time', 10.0, 45.0, 
+                        16.0, 1.0)
+
+    # runs
+    replications = st.slider('No. replications', 1, 50, 10)
 
 # Setup scenario using supplied variables
 args = Scenario()
