@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Streamlit Live Coding Tutorial
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Thomas
+    family-names: Monks
+    affiliation: University of Exeter
+    orcid: 'https://orcid.org/0000-0003-2631-4481'
+repository-code: >-
+  https://github.com/health-data-science-OR/streamlit_tutorial
+abstract: >-
+  A short live tutorial for deploying any predictive or
+  simulation model via streamlit.  The tutorial is designed
+  to be done live where the lecturer starts with `main.py`
+  and working through the exercises in the README and
+  demonstrating `streamlit` functionality.
+keywords:
+  - python
+  - streamlit
+  - deployment
+  - discrete-event-simulation
+  - open science
+license: MIT
