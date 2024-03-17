@@ -1,10 +1,47 @@
-# Streamlit Tutorial
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100+/)
+[![License: MIT](https://img.shields.io/badge/ORCID-0000--0003--2631--4481-brightgreen)](https://orcid.org/0000-0003-2631-4481)
+[![Read the Docs](https://readthedocs.org/projects/pip/badge/?version=latest)](https://pythonhealthdatascience.github.io/stars-simpy-example-docs)
 
-A draft tutorial for deploying any model via streamlit.
+# Streamlit Live Coding Tutorial
+
+A short live tutorial for deploying any predictive or simulation model via streamlit.  
+
+> The tutorial is designed to be done live where the lecturer starts with `main.py` and working through the exercises below demonstrating `streamlit` functionality.
+
+## Dependencies
+
+All dependencies can be found in [`binder/environment.yml`]() and are pulled from conda-forge.  To run the code locally, we recommend install [mini-conda](https://docs.conda.io/en/latest/miniconda.html); navigating your terminal (or cmd prompt) to the directory containing the repo and issuing the following command:
+
+```
+conda env create -f binder/environment.yml
+```
+
+Activate the conda environment using the following command
+
+```
+conda activate deploy_st
+```
+
+## Case study model
+
+**This example is based on exercise 13 from Nelson (2013) page 170.**
+
+> *Nelson. B.L. (2013). [Foundations and methods of stochastic simulation](https://www.amazon.co.uk/Foundations-Methods-Stochastic-Simulation-International/dp/1461461596/ref=sr_1_1?dchild=1&keywords=foundations+and+methods+of+stochastic+simulation&qid=1617050801&sr=8-1). Springer.* 
+
+> The model is implemented in the pypi package `treat_sim`. The model code can be found [here](https://github.com/pythonhealthdatascience/stars-treat-sim)
+
+We adapt a textbook example from Nelson (2013): a terminating discrete-event simulation model of a U.S based treatment centre. In the model, patients arrive to the health centre between 6am and 12am following a non-stationary Poisson process. On arrival, all patients sign-in and are triaged into two classes: trauma and non-trauma. Trauma patients include impact injuries, broken bones, strains or cuts etc. Non-trauma include acute sickness, pain, and general feelings of being unwell etc. Trauma patients must first be stabilised in a trauma room. These patients then undergo treatment in a cubicle before being discharged. Non-trauma patients go through registration and examination activities. A proportion of non-trauma patients require treatment in a cubicle before being discharged. The model predicts waiting time and resource utilisation statistics for the treatment centre. The model allows managers to ask question about the physical design and layout of the treatment centre, the order in which patients are seen, the diagnostic equipment needed by patients, and the speed of treatments. For example: “what if we converted a doctors examination room into a room where nurses assess the urgency of the patients needs.”; or “what if the number of patients we treat in the afternoon doubled” 
+
+## Instruction to run the model from the command line
+
+Ensure you are in the `deploy_st` environment. A script to run the model is contained in `main.py`.  From a terminal issue the following command:
+
+```bash
+python main.py
+```
 
 ## Exercises 
-
-These exercises use the conda environment `deploy_st` included in `binder/environment.yml` and the simulation code included in `main.py`
 
 1. Create a a basic streamlit app with a title and information.
 
