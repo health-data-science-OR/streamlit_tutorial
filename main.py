@@ -1,17 +1,15 @@
 '''
 Script to complete a basic run of the model and display a table of
-results.
+results in a streamlit app.
 
 The model is imported from a pypi package 'treat_sim'
 
 Full documentation and source code for `treat_sim` is available as 
-* Jupyter Book: https://tommonks.github.io/treatment-centre-sim/
-* github: https://github.com/TomMonks/treatment-centre-sim
+* Jupyter Book: https://pythonhealthdatascience.github.io/stars-simpy-example-docs
+* github: https://github.com/pythonhealthdatascience/stars-treat-sim
 
 A conda environment has been provided locally, but the model can be pip installed
 `pip install treat_sim==1.0.0`
-
-This will be adapted into a basic streamlit app
 '''
 from treat_sim.model import Scenario, multiple_replications
 
