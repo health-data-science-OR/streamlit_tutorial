@@ -46,7 +46,7 @@ python main.py
 
 The code is MIT licensed. Please feel free to reuse and adapt.  I would be grateful for a fork and a citation.  The repo is deposited at zenodo and be cited as follows:
 
-> Monks, T. (2024). Streamlit Live Coding Tutorial (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.10827816
+> Monks, T. (2024). Streamlit Live Coding Tutorial (v3.0.0). Zenodo. [https://doi.org/10.5281/zenodo.10827816](https://doi.org/10.5281/zenodo.10827815)
 
 ```bibtex
 @software{monks_2024_10827816,
