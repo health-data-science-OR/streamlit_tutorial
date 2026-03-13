@@ -2,7 +2,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100+/)
 [![License: MIT](https://img.shields.io/badge/ORCID-0000--0003--2631--4481-brightgreen)](https://orcid.org/0000-0003-2631-4481)
 [![Read the Docs](https://readthedocs.org/projects/pip/badge/?version=latest)](https://pythonhealthdatascience.github.io/stars-simpy-example-docs)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10827816.svg)](https://doi.org/10.5281/zenodo.10827816)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19003074.svg)](https://doi.org/10.5281/zenodo.19003074)
 
 # Streamlit Live Coding Tutorial
 
@@ -55,9 +55,9 @@ The code is MIT licensed. Please feel free to reuse and adapt.  I would be grate
   month        = mar,
   year         = 2024,
   publisher    = {Zenodo},
-  version      = {v1.0.0},
-  doi          = {10.5281/zenodo.10827816},
-  url          = {https://doi.org/10.5281/zenodo.10827816}
+  version      = {v3.0.0},
+  doi          = {10.5281/zenodo.10827815},
+  url          = {https://doi.org/10.5281/zenodo.10827815}
 }
 ```
 
